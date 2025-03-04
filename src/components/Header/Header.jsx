@@ -5,15 +5,16 @@ import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import LowerHeadr from "./LowerHeadr";
 import amazonLogo from "../../assets/amazonLogo.png";
+import { Link } from "react-router";
 
 const Header = () => {
   return (
     <>
       <section className={classes.header__container}>
         {/* Logo */}
-        <a href="#" className={classes.logo__container}>
+        <Link to="/" className={classes.logo__container}>
           <img src={amazonLogo} alt="Amazon logo" />
-        </a>
+        </Link>
 
         {/* Delivery Info */}
         <div className={classes.deliver}>
@@ -47,22 +48,22 @@ const Header = () => {
           </a>
 
           {/* Sign In */}
-          <a href="#">
+          <Link to="/auth">
             <p>Sign in</p>
             <span>Account & Lists</span>
-          </a>
+          </Link>
 
           {/* Returns & Orders */}
-          <a href="#">
+          <Link to="/orders">
             <p>Returns</p>
             <span>& Orders</span>
-          </a>
+          </Link>
 
           {/* Cart */}
-          <a href="#" className={classes.cart}>
+          <Link to="/cart" className={classes.cart}>
             <BiCart size={35} aria-label="Cart" />
             <span>0</span>
-          </a>
+          </Link>
         </div>
       </section>
 
