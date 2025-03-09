@@ -18,7 +18,12 @@ function Product() {
   return (
     <div className={style.products_container}>
       {products.map((productDatas, index) => (
-        <ProductCard key={index} item={productDatas} renderDesc={false} />
+        <ProductCard
+          key={index}
+          item={productDatas}
+          renderDesc={false}
+          renderAdd={true}
+        />
       ))}
     </div>
   );

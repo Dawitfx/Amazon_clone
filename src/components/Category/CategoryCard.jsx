@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
+import { Link } from "react-router";
 import style from "./category.module.css";
 
 const CategoryCard = ({ data }) => {
@@ -7,13 +8,13 @@ const CategoryCard = ({ data }) => {
 
   return (
     <div className={style.category}>
-      <a href="#">
+      <Link to={`/category/${data.name}`}>
         <span>
-          <h1>{data.title}</h1>
+          <h2>{data.name}</h2>
         </span>
         <img src={data.imgLink} alt="" />
         <p>shop know</p>
-      </a>
+      </Link>
     </div>
   );
 };
